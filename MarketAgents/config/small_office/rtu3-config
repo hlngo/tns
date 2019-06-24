@@ -1,0 +1,69 @@
+{
+    "campus": "PNNL", # if omitted defaults to ""
+    "building": "SMALL_OFFICE", # if omitted defaults to ""
+    "actuation_enable_topic": "default", #if omitted defaults or set to default use "campus/building/actuate"
+    "input_data_timezone": "UTC", # if omitted defaults to "UTC"
+    "actuation_enabled_onstart": true, # if omitted defaults to false
+    "control_interval":300,
+    "agent_name": "hp3",
+    "inputs": [
+        {
+            "mapped": "sfs", # mapped value does not change (for rtu agent or vav agent)
+            "point": "SupplyFanStatus",
+            "topic": "devices/PNNL/SMALL_OFFICE/HP3/all",
+            "inital_value": 0
+        },
+        {
+            "mapped": "oat",
+            "point": "OutdoorAirTemperature",
+            "topic": "devices/PNNL/SMALL_OFFICE/HP3/all",
+            "inital_value": 22.8
+        },
+
+        {
+            "mapped": "zt",
+            "point": "ZoneTemperature",
+            "topic": "devices/PNNL/SMALL_OFFICE/HP3/all",
+            "inital_value": 22.8
+        },
+        {
+            "mapped": "mclg",
+            "point": "FirstStageCooling",
+            "topic": "devices/PNNL/SMALL_OFFICE/HP3/all",
+            "inital_value": 0
+        }
+    ],
+    "outputs": [
+        {
+            "mapped": "csp",
+            "point": "ZoneCoolingTemperatureSetPoint",
+            "topic": "PNNL/SMALL_OFFICE/HP3/ZoneCoolingTemperatureSetPoint",
+            "flexibility_range": [21.0, 24.6], # set point at low price to high price
+            "off_setpoint": 26.7, # unoccupied or off set point
+            "actuator": "platform.actuator", #if omitted defaults to "platform.actuator"
+            "release": "None", # Options "None" or "default" - if omitted defaults to "None"
+            "offset": 0, # if omitted defaults to 0
+            "fallback": 22.8 # if omitted defaults to None
+        }
+    ],
+    "schedule":{
+        "Monday": {"start": "6:00", "end": "18:00"},
+        "Tuesday": {"start": "6:00", "end": "18:00"},
+        "Wednesday": {"start": "6:00", "end": "18:00"},
+        "Thursday": {"start": "6:00", "end": "18:00"},
+        "Friday": {"start": "6:00", "end": "18:00"},
+        "Saturday": "always_off",
+        "Sunday": "always_off"
+    },
+    "model_parameters": {
+        "model_type": "firstorderzone",
+        "on_min": 0,
+        "off_min": 5,
+        "temp_db": 0.5,
+        "rated_power": 2.64,
+        "c1":[4.40875714692,0.16666665,0.16666665,0.16666665,0.16666665,0.16666665,0.16666665,0.16666665,0.523498406255,0.321093816993,0.210023658436,0.310192437719,0.256920061092,0.23669972813,0.235522828486,0.243681756709,0.298513544158,0.364521675091,0.391880466226,0.386415466562,0.365589521884,8.24846026418,0.176943165006,0.413858922912],
+        "c2":[0.0878461612052,82.5013391399,98.3159434443,208.938962454,44.859389619,28.1928737239,74.2867254454,11.8457072907,0.565708800547,0.216476602658,0.227065036222,0.647424428955,1.00065315921,1.2383972174,1.41644354185,1.57499552108,1.65664421731,1.42947234354,1.28303699197,1.08901481869,0.932782141394,202057.913027,9419220.38417,0.217501772015],
+        "c3":[0.251109386861,3.51170128362e-22,1.42453545789e-14,1.41221566233e-21,0.0264221614459,0.0402481430993,0.0216466544892,0.0856859428638,0.255409295642,0.285664889316,9.66835066334e-19,1.00558028117e-14,3.31102521118e-19,3.8314899629e-17,5.67189854894e-23,1.89821138377e-22,4.07860323584e-22,3.05276185928e-18,4.02401355632e-23,3.36440971923e-24,4.02201464171e-11,2.99096097202e-17,0.674972816177,0.556708072865],
+        "c":7.207
+    }
+}

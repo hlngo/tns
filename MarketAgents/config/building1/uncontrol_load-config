@@ -1,0 +1,140 @@
+{
+    "market_name": "electric",
+    "campus": "PNNL",
+    "building": "BUILDING1",
+    "agent_name": "uncontrol",
+    "power_0":15.1749096,
+    "power_1":15.17773457,
+    "power_2":15.17987153,
+    "power_3":15.18115978,
+    "power_4":15.18116476,
+    "power_5":15.96555613,
+    "power_6":15.94937378,
+    "power_7":15.92663965,
+    "power_8":15.91306532,
+    "power_9":15.90420203,
+    "power_10":15.87382349,
+    "power_11":15.80044281,
+    "power_12":15.74457918,
+    "power_13":15.681629,
+    "power_14":15.69699551,
+    "power_15":15.7806729,
+    "power_16":15.83161326,
+    "power_17":15.03152296,
+    "power_18":15.05785517,
+    "power_19":15.07441648,
+    "power_20":15.0781998,
+    "power_21":15.09480589,
+    "power_22":15.11001985,
+    "power_23":15.12005655,
+    "devices": {
+        "LIGHTING/ZONE102": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE104": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE105": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE107": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE108": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE112": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE116": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE118": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE119": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE120": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE123A": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE123B": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE127A": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE127B": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE129": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE131": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE133": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE136": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE142": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE143": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "LIGHTING/ZONE150": {
+            "points": ["Power"],
+            "conversion": "Power/1000.0"
+        },
+        "AHU1": {
+            "points": ["SupplyFanPower"],
+            "conversion": "SupplyFanPower/1000.0"
+        },
+        "AHU2": {
+            "points": ["SupplyFanPower"],
+            "conversion": "SupplyFanPower/1000.0"
+        },
+        "AHU3": {
+            "points": ["SupplyFanPower"],
+            "conversion": "SupplyFanPower/1000.0"
+        },
+        "AHU4": {
+            "points": ["SupplyFanPower"],
+            "conversion": "SupplyFanPower/1000.0"
+        },
+        "Chiller": {
+            "points": ["Power"],
+            "conversion": "Power/(6.16*1000.0)"
+        },
+        "METERS": {
+            "points": ["WholeBuildingPower"],
+            "conversion": "WholeBuildingPower*(-1)/1000.0"
+        }
+    }
+}

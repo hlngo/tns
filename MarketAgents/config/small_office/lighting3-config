@@ -1,0 +1,41 @@
+{
+    "campus": "PNNL", # if ommited defaults to ""
+    "building": "SMALL_OFFICE", # if omiited defaults to ""
+    "actuation_enable_topic": "default", #if ommited defaults or set to default use "campus/building/actuate"
+    "input_data_timezone": "UTC", # if ommited defaults to "UTC"
+    "actuation_enabled_onstart": true, # if ommited defaults to false
+    "control_interval":300,
+    "agent_name": "light2",
+    "market_name": "electric",
+    "inputs": [
+        {
+            "mapped": "occ", # mapped value does not change (for rtu agent or vav agent)
+            "point": "SupplyFanStatus",
+            "topic": "devices/PNNL/SMALL_OFFICE/HP3/all",
+            "inital_value": 0
+        }
+    ],
+    "outputs": [
+        {
+            "mapped": "light",
+            "point": "DimmingLevelOutput",
+            "topic": "PNNL/SMALL_OFFICE/LIGHTING/GN3/DimmingLevelOutput",
+            "flexibility_range": [0.9, 0.7], # [setpoint at min price, setpoint at max price]
+            "off_setpoint": 0.15, # unoccupied or off set point
+            "actuator": "platform.actuator", #if ommited defaults to "platform.actuator"
+            "release": "None", # Options "None" or "default" - if ommited defaults to "None"
+            "offset": 0 # if ommited defaults to 0
+        }
+    ],
+    "schedule":{
+        "Monday": "always_on",
+        "Tuesday": "always_on",
+        "Wednesday": "always_on",
+        "Thursday": "always_on",
+        "Friday": "always_on",
+        "Saturday": "always_on",
+        "Sunday": "always_on"
+    },
+
+    "rated_power": 1.4380
+}

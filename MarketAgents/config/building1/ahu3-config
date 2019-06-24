@@ -1,0 +1,24 @@
+{
+    "air_market_name": "air3",
+    "electric_market_name": "electric",
+    "agent_name":"b1_ahu3",
+    "campus": "PNNL",
+    "building": "BUILDING1",
+    "device": "AHU3",
+
+
+    "equipment_configuration": {
+        "has_economizer": true,
+        "economizer_limit": 18.33,
+        "supply-air sepoint": 13.0,
+        "nominal zone-setpoint": 21.1,
+        "building chiller": true
+    },
+    "model_configuration": {
+        "c0": 0.50944286697,
+        "c1": -1.83594670779,
+        "c2": 2.82885336312,
+        "c3": -0.176646603312,
+        "COP" : 6.16
+	}
+}

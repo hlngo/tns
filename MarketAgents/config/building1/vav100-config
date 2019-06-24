@@ -1,0 +1,143 @@
+{
+    "campus": "PNNL", # if omitted defaults to ""
+    "building": "BUILDING1", # if omitted defaults to ""
+    "actuation_enable_topic": "default", #if omitted defaults or set to default use "campus/building/actuate"
+    "input_data_timezone": "UTC", # if omitted defaults to "UTC"
+    "actuation_enabled_onstart": true, # if omitted defaults to false
+    "control_interval":300,
+    "agent_name": "vav100",
+    "terminal_box_type": "VAV",
+    "inputs": [
+        {
+            "mapped": "sfs", # mapped value does not change (for rtu agent or vav agent)
+            "point": "SupplyFanStatus",
+            "topic": "devices/PNNL/BUILDING1/AHU1/all",
+            "inital_value": 0
+        },
+        {
+            "mapped": "oat",
+            "point": "OutdoorAirTemperature",
+            "topic": "devices/PNNL/BUILDING1/AHU1/all",
+            "inital_value": 21.1
+        },
+        {
+            "mapped": "zt",
+            "point": "ZoneTemperature",
+            "topic": "devices/PNNL/BUILDING1/AHU1/VAV100/all",
+            "inital_value": 21.1
+        },
+        {
+            "mapped": "zdat",
+            "point": "ZoneDischargeAirTemperature",
+            "topic": "devices/PNNL/BUILDING1/AHU1/VAV100/all",
+            "inital_value": 13.8
+        },
+        {
+            "mapped": "zaf",
+            "point": "ZoneAirFlow",
+            "topic": "devices/PNNL/BUILDING1/AHU1/VAV100/all",
+            "inital_value": 0.160412101733
+        }
+    ],
+    "outputs": [
+        {
+            "mapped": "csp",
+            "point": "ZoneCoolingTemperatureSetPoint",
+            "topic": "PNNL/BUILDING1/AHU1/VAV100/ZoneCoolingTemperatureSetPoint",
+            "flexibility_range": [0.53470700577499997, 0.160412101733], # demand curve flexibility at low price to high price
+            "control_flexibility": [21.22, 23.22], # set point at low price to high price
+            "off_setpoint": 26.7, # unoccupied or off set point
+            "actuator": "platform.actuator", #if omitted defaults to "platform.actuator"
+            "release": "None", # Options "None" or "default" - if omitted defaults to "None"
+            "offset": 0, # if omitted defaults to 0
+            "fallback": 21.1 # if omitted defaults to None
+        }
+    ],
+    "schedule":{
+        "Monday": "always_on",
+        "Tuesday": "always_on",
+        "Wednesday": "always_on",
+        "Thursday": "always_on",
+        "Friday": "always_on",
+        "Saturday": "always_on",
+        "Sunday": "always_on"
+    },
+    "c1": [
+        2.3766781283127414e-06,
+        1.4794459730245341e-16,
+        2.9415334683734606e-06,
+        0.10913202050610471,
+        0.10951127081969342,
+        1.4120447553986512e-06,
+        6.0323836720806448e-19,
+        1.2342752163037213e-16,
+        6.7533488485989518e-12,
+        0.0025774592194199469,
+        3.3131049020373921e-10,
+        0.0024579186099712071,
+        0.00048557908546418562,
+        3.3899999266705686e-16,
+        1.485147819551354e-16,
+        0.0073145745409351889,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10,
+        8.9746394286209589e-10
+    ],
+    "c2": [
+        1.9752351837580538e-06,
+        3.3071243605815108e-17,
+        2.9690066265364145e-06,
+        1.2387784653323739e-05,
+        2.6472429594945802e-05,
+        1.4531930964330479e-05,
+        0.013396416670171937,
+        1.581431752200517,
+        2.7113277629282586,
+        2.8173560345672848,
+        3.3512984048423302,
+        3.2349423122607641,
+        3.3171173323932353,
+        4.2018836552798531,
+        3.9037804004353323,
+        3.1855158611840428,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842,
+        3.1863849533960842
+    ],
+    "c3": [
+        0.16044491623205387,
+        0.16041210173300008,
+        0.1604652293962498,
+        1.7974373464343583,
+        1.8031810145137572,
+        0.1604866462544963,
+        0.20677980644364075,
+        0.21129424212455661,
+        0.20589660796282444,
+        0.19311248373506779,
+        0.2062383598159597,
+        0.18389536146548219,
+        0.2035853197836342,
+        0.21244945928402262,
+        0.20244789125031981,
+        0.0853454930632353,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551,
+        0.17038245047540551
+    ]
+}

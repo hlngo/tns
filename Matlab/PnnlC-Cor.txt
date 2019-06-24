@@ -1,0 +1,2 @@
+TimeStamp,TimeInterval,Record,MarginalPrice,Power,PowerUncertainty,Cost,ReactivePower,ReactivePowerUncertainty,Voltage,VoltageUncertainty
+180312:000755,180313-1200,0,Inf,-6400,0,0,0,0,0,0

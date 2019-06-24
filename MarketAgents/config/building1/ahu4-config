@@ -1,0 +1,25 @@
+{
+    "air_market_name": "air4",
+    "electric_market_name": "electric",
+    "agent_name":"b1_ahu4",
+    "campus": "PNNL",
+    "building": "BUILDING1",
+    "device": "AHU4",
+
+    "equipment_configuration": {
+        "has_economizer": true,
+        "economizer_limit": 18.33,
+        "supply-air sepoint": 13.0,
+        "nominal zone-setpoint": 21.1,
+        "variable-volume": false,
+        "building chiller": true
+    },
+    "model_configuration": {
+        "c0": 0.9871574053,
+        "c1": 0,
+        "c2": 0,
+        "c3": 0,
+        "mDotAir": 0.59123761064299996,
+	    "COP" : 6.16
+	}
+}

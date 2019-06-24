@@ -1,0 +1,92 @@
+{
+	"market_name": "electric",
+	"campus": "PNNL",
+	"building": "SMALL_OFFICE",
+	"agent_name": "uncontrol",
+	"devices": {
+		"LIGHTING/GS1": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/GE2": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/GN3": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/GW4": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/TS11": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/TS11": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},		
+		"LIGHTING/TE12": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/TN13": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/TW14": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"LIGHTING/TC15": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},		
+		"HP1": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP2": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP3": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP4": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP5": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP6": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP7": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP8": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP9": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"HP10": {
+			"points": ["Power"],
+			"conversion": "Power*(0.001)"
+		},
+		"METERS": {
+			"points": ["WholeBuildingPower"],
+			"conversion": "WholeBuildingPower*(-0.001)"
+		}
+	}
+}

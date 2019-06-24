@@ -1,0 +1,20 @@
+{
+	"air_market_name": "air",
+	"electric_market_name": "electric",
+	"agent_name":"b1_ahu1",
+	"campus": "PNNL",
+	"building": "SEB",
+	"device": "AHU1",
+    "device_points": {
+        "supply_air_flow": "DischargeAirFlow",
+        "mixed_air_temperature": "MixedAirTemperature",
+        "return_air_temperature": "ReturnAirTemperature",
+        "supply_air_temperature": "DischargeAirTemperature"
+    },
+	"c0": -0.0053,
+	"c1": 0.4031,
+	"c2": -0.1032,
+	"c3": 0.0227,
+	"COP" : 6.16,
+	"sim" : false
+}
